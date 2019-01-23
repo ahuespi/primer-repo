@@ -1,0 +1,17 @@
+/* Esto es un comentario de CSS */
+
+/*
+- Anatomia de una regla CSS:
+
+selector {
+    propiedades: valor;
+    propiedades: valor;
+    propiedades: valor;
+}
+*/
+
+/* Regla CSS */
+h1 {
+    font-size: 4em;
+    color: #c1c1c1;
+}
