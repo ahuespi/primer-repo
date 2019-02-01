@@ -22,6 +22,7 @@ a:hover {
     align-items: center; /* Eje X*/
     justify-content: flex-start; /* Eje Y */
     padding: 10px;
+    border-bottom: 1px solid #FFF;
 }
 #menu {
     list-style: none;
@@ -48,15 +49,14 @@ a:hover {
 
 [Version Facil]
 li {
-    display: inline;
-}
-[Version Clasica]
-li {
-    float:left;
-}
-[Version Hiper Mega Archi Moderno]
-li {
-    display: flex;
+     display: inline;
+
+    [Version Clasica]
+
+     float:left;
+
+    [Version Hiper Mega Archi Moderno]
+     display: flex;
     flex-direction: row;
 }
 
@@ -66,3 +66,23 @@ li {
 * display: none // Oculta el elemento completamente de la interfaz
 
 */
+
+#content figure {
+    margin: 0;
+}
+#content figure figcaption {
+    background-color: #212121;
+    padding: 10px;
+}
+#content figure figcaption h2 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 32px;
+}
+#content img {
+    display: block; /* Eliminar los pixeles fantasmas */
+    width: 100%;
+}
+.noticia {
+    border-bottom: 1px solid #CCCCCC;
+}
