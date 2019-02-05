@@ -15,8 +15,10 @@ a {
 a:hover {
     color: #FFFFFF;
 }
-#top {
+#top, #content figure figcaption, #copyright {
     background-color: #212121;
+}
+#top {
     display: flex;
     flex-direction: row;
     align-items: center; /* Eje X*/
@@ -71,7 +73,6 @@ li {
     margin: 0;
 }
 #content figure figcaption {
-    background-color: #212121;
     padding: 10px;
 }
 #content figure figcaption h2 {
@@ -85,10 +86,36 @@ li {
 }
 .noticia {
     border-bottom: 1px solid #CCCCCC;
-    display: flex;  
-    margin: 0 40px;
+    display: flex;
+    margin: 0 10px;
+    padding: 10px 0;
+    color: #000000;
+}
+.noticia-img, .noticia-text {
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 .noticia-img {
-    width: 500px;
-    padding: 20px;
+    width: 30%;
+}
+.noticia-text {
+    width: 70%;
+}
+.noticia-text h3 {
+    margin: 17px 0 5px 0;
+}
+.noticia-text small {
+    font-size: 15px;
+}
+.noticia-text p {
+    font-size: 15px;
+}
+#ultimasNoticias .noticia:last-child {
+    border: none; 
+}
+#copyright p {
+    margin: 0;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
 }
