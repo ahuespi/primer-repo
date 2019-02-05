@@ -85,4 +85,10 @@ li {
 }
 .noticia {
     border-bottom: 1px solid #CCCCCC;
+    display: flex;  
+    margin: 0 40px;
+}
+.noticia-img {
+    width: 500px;
+    padding: 20px;
 }
