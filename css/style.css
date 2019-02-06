@@ -73,12 +73,13 @@ li {
     margin: 0;
 }
 #content figure figcaption {
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
 }
 #content figure figcaption h2 {
     margin: 0;
     color: #FFFFFF;
-    font-size: 32px;
+    font-size: 50px;
 }
 #content img {
     display: block; /* Eliminar los pixeles fantasmas */
@@ -119,6 +120,9 @@ li {
     color: #ffffff;
     text-align: center;
 }
+#tablaPosiciones {
+    margin: 70px 0;
+}
 #tablaPosiciones table {
     border-collapse: collapse;
     border: 1px solid #000000;
@@ -130,21 +134,24 @@ li {
 }
 #tablaPosiciones table th {
     color: #FFF;
-    background-color: red;
+    background-color: #ff0000;
+    padding: 10px 0;
 }
 #tablaPosiciones table td {
-    background-color: #CCCCCC;
-    padding: 10px;
+    background-color: #efefef;
+    padding: 12px 10px;
 }
 
 #tablaPosiciones table td:nth-of-type(odd){ /* ◄ Impares*/
     text-align: center;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 25px;
 }
 #tablaPosiciones table td:nth-of-type(even) {
-    color: red;
+    color: #333333;
+    font-size: 17px;
 }
 #tablaPosiciones table td:nth-of-type(even) span{ /* ◄ Pares*/
-    color: green;
+    color: #006a83;
+    font-weight: bold;
 }   
