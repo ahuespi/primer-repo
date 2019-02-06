@@ -119,3 +119,32 @@ li {
     color: #ffffff;
     text-align: center;
 }
+#tablaPosiciones table {
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    margin: auto;
+    width: 800px;
+}
+#tablaPosiciones table tr {
+    border: 1px solid #ffffff;
+}
+#tablaPosiciones table th {
+    color: #FFF;
+    background-color: red;
+}
+#tablaPosiciones table td {
+    background-color: #CCCCCC;
+    padding: 10px;
+}
+
+#tablaPosiciones table td:nth-of-type(odd){ /* ◄ Impares*/
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+#tablaPosiciones table td:nth-of-type(even) {
+    color: red;
+}
+#tablaPosiciones table td:nth-of-type(even) span{ /* ◄ Pares*/
+    color: green;
+}   
