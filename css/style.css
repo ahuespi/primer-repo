@@ -26,6 +26,9 @@ a:hover {
     padding: 10px;
     border-bottom: 1px solid #FFF;
 }
+#top button {
+    display: none;
+}
 #menu {
     list-style: none;
     padding: 0;
@@ -48,7 +51,6 @@ a:hover {
     background-color: #AAAAAA;
 }
 /*
-
 [Version Facil]
 li {
      display: inline;
@@ -68,7 +70,6 @@ li {
 * display: none // Oculta el elemento completamente de la interfaz
 
 */
-
 #content figure {
     margin: 0;
 }
@@ -141,7 +142,6 @@ li {
     background-color: #efefef;
     padding: 12px 10px;
 }
-
 #tablaPosiciones table td:nth-of-type(odd){ /* ◄ Impares*/
     text-align: center;
     font-weight: bold;
@@ -154,4 +154,37 @@ li {
 #tablaPosiciones table td:nth-of-type(even) span{ /* ◄ Pares*/
     color: #006a83;
     font-weight: bold;
-}   
+}  
+
+/* Ajustes Mobile */
+
+@media screen and (max-width: 480px) {
+    #top {
+        flex-wrap: wrap;
+    }
+    #top button {
+        border: none;
+        background-color: transparent;
+        color: #CCCCCC;
+        font-size: 26px;
+        font-weight: bold;
+        margin-left: auto;
+        display: block;
+    }
+    #top button:focus + #menu {
+        display: block;
+    }
+    #menu {
+        display: none;
+        margin: auto;
+        width: 100%;
+        background-color: #212121;
+        position: absolute;
+        top: 58px;
+        left: 0px;
+    }
+    #menu li {
+        float: none;
+    }
+
+}
