@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var txt = "Hola marte!"; // <-- Valor "Determinado"
+        var num = 520.25 * 1.21; // <-- Valor "Indeterminado" (Determinable luego de una operacion logica/matematica) 
+
+        var dato = prompt("Ingrese su e-mail"); // <-- Valor "Indeterminado" (Determinable por la interaccion del usuario)
+
+        if (dato == "") {
+            alert("ERROR: Todo Mal");
+        } else {
+            alert(dato);
+        }
+    </script>
+</head>
+<body>
+    1- Los datos ya vienen predeterminados porque lo escribio el dev <br>
+    2- Los datos sean inderterminados
+
+</body>
+</html>
