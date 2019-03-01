@@ -7,3 +7,9 @@ var noticias = [
     /* 2 => */ ["A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo", "Diego Di Marco", "El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia.", "firpo.jpg"],
     /* 3 => */ ["Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI", "Melina Morales", "El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre.", "buenos-aires.jpg"]
 ];
+
+var sliderNews = [
+    ["París y los Ángeles serán las próximas sedes de los Juegos Olímpicos", "juegos-olimpicos.jpg"],
+    ["paris parIS PARIS", "paris.jpeg"],
+    ["Los Angeles 2028", "LA-2028.jpg"]
+]

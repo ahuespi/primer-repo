@@ -56,24 +56,13 @@
   <!-- SLIDER -->
   <div id="noticiasDestacas" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-      <figure class="carousel-item active">
-        <img src="img/juegos-olimpicos.jpg" class="d-block w-100" alt="...">
+      <figure class="carousel-item d-none ">
+        <img src="http://via.placeholder.com/600x338" class="d-block w-100" alt="...">
         <figcaption class="carousel-caption bg-dark w-100 position-static text-left p-3">
-          <h5>París y los Ángeles serán las próximas sedes de los Juegos Olímpicos</h5>
+          <h5>{{titulo}}</h5>
         </figcaption>
       </figure>
-      <figure class="carousel-item">
-        <img src="img/paris.jpeg" class="d-block w-100" alt="...">
-        <figcaption class="carousel-caption bg-dark w-100 position-static text-left p-3">
-          <h5>París y los Ángeles serán las próximas sedes de los Juegos Olímpicos</h5>
-        </figcaption>
-      </figure>
-      <figure class="carousel-item">
-        <img src="img/LA-2028.jpg" class="d-block w-100" alt="...">
-        <figcaption class="carousel-caption bg-dark w-100 position-static text-left p-3">
-          <h5>París y los Ángeles serán las próximas sedes de los Juegos Olímpicos</h5>
-        </figcaption>
-      </figure>
+      
     </div>
     <a class="carousel-control-prev" href="#noticiasDestacadas" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -97,6 +86,67 @@
           <p>{{detalle}}</p>
         </div>
       </article>
+    </section>
+    <section id="table">
+      <div class="table-responsive">
+        <table class="table table-sm">
+          <thead class="thead-dark">
+            <tr>
+              <th colspan="12" class="text-center">3 fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="align-middle font-weight-bold">1</td>
+              <td>
+                <span>Tigre, 4ptos</span><br>
+                <span>Patronato, 4ptos</span>
+              </td>
+              <td class="align-middle font-weight-bold">2</td>
+              <td>
+                <span>Colon, 4ptos</span><br>
+                <span>Estudiantes, 3ptos</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-middle font-weight-bold">3</td>
+              <td>
+                <span>Def. Y Justicia</span>, 4ptos <br>
+                <span>Union</span>, 4ptos
+              </td>
+              <td class="align-middle font-weight-bold">4</td>
+              <td>
+                <span>Argentinos Juniors</span>, 4ptos<br>
+                <span>Belgrano</span>, 3ptos
+              </td>
+            </tr>
+            <tr>
+              <td class="align-middle font-weight-bold">5</td>
+              <td>
+                <span>Newell's</span>, 4ptos <br>
+                <span>Olimpo</span>, 4ptos
+              </td>
+              <td class="align-middle font-weight-bold">6</td>
+              <td>
+                <span>San Lorenzo</span>, 4ptos<br>
+                <span>Arsenal</span>, 3ptos
+              </td>
+            </tr>
+            <tr>
+              <td class="align-middle font-weight-bold">7</td>
+              <td>
+                <span>Independiente</span>, 4ptos <br>
+                <span>Lanus</span>, 4ptos
+              </td>
+              <td class="align-middle font-weight-bold">8</td>
+              <td>
+                <span>Talleres</span>, 4ptos<br>
+                <span>Velez</span>, 3ptos
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 
@@ -132,6 +182,20 @@
 
       document.querySelector("#ultimas-noticias").appendChild(noticia);
     }
+
+    for (var i = 0; i < sliderNews.length; i++) {
+      var sliderItem = document.querySelector(".carousel-item").cloneNode(true);
+      console.log(sliderItem);
+      document.querySelector(".carousel-item:first-child").classList.add("active");
+      sliderItem.querySelector(".carousel-item h5").innerText = sliderNews[i][0];
+      sliderItem.querySelector("img").src="img/" + sliderNews[i][1];
+      sliderItem.classList.remove("active");
+      sliderItem.classList.remove("d-none");
+      
+
+      document.querySelector(".carousel-inner").appendChild(sliderItem);
+    }
+
     
   </script>
 </body>
