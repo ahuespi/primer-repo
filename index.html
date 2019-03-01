@@ -87,27 +87,53 @@
   <!-- FIN SLIDER -->
   <main class="container-fluid">
     <section id="ultimas-noticias">
-      <article class="row noticia">
+      <article class="row noticia d-none">
         <div class="noticia-img col-12 col-sm-5 col-lg-4">
-          <img class="img-fluid"  src="img/sorteo-libertadores.jpg" alt="">
+          <img class="img-fluid" src="http://via.placeholder.com/1000x600" alt="">
         </div>
         <div class="noticia-txt col-12 col-sm-7 col-lg-8">
-          <h3 class="h5 font-weight-bold">La tecnología llega a la actual edición de la Libertadores</h3>
-          <p class="small">por Joaquín Angeli</p>
-          <p>La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.</p>
+          <h3 class="h5 font-weight-bold">{{titulo}}</h3>
+          <p class="small">por <a href="#">{{autor}}</a></p>
+          <p>{{detalle}}</p>
         </div>
       </article>
     </section>
   </main>
 
   <!--
+    PENSAR EN ENTIDADES/COSAS/OBJETOS
+    LAS IMAGENES SE ALMACENAN CON RUTAS EN LAS BASES DE DATOS
+    
+    CONECTARSE a la fuente de datos
+    OBTENERLO
+    PROCESARLO
+    MOSTRARLOS
 
+    En una hoja de google sheet 
+    titulo autor detalle imagen fecha
   -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="js/jquery-3.3.1.slim.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/noticias.js"></script>
+  <script>
+
+    for (var i = 0; i < noticias.length; i++) {
+      var noticia = document.querySelector(".noticia").cloneNode(true); // cloneNode() Solo clona al elemento solo, cloneNode(true) clona todo
+
+      noticia.querySelector("h3").innerText = noticias[i][0];
+      noticia.querySelector(".small a").innerText = noticias[i][1];
+      noticia.querySelector("p:last-child").innerText = noticias[i][2];
+      noticia.querySelector(".img-fluid").src = "img/" + noticias[i][3];
+
+      noticia.classList.remove("d-none");
+
+      document.querySelector("#ultimas-noticias").appendChild(noticia);
+    }
+    
+  </script>
 </body>
 
 </html>
