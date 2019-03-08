@@ -12,4 +12,17 @@ var sliderNews = [
     ["París y los Ángeles serán las próximas sedes de los Juegos Olímpicos", "juegos-olimpicos.jpg"],
     ["paris parIS PARIS", "paris.jpeg"],
     ["Los Angeles 2028", "LA-2028.jpg"]
-]
+];
+
+// Array asociativo (en vez de usar numeros utiliza claves KeyValue)
+
+
+var noticia = { // <-- Object
+    titulo: "La tecnología llega a la actual edición de la Libertadores",
+    autor : "Joaquín Angeli",
+    detalle: "La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.",
+    imagen: "sorteo-libertadores.jpg"
+}
+
+console.log(noticia)
+console.table(noticia)

@@ -136,7 +136,7 @@
               <td class="align-middle font-weight-bold">7</td>
               <td>
                 <span>Independiente</span>, 4ptos <br>
-                <span>Lanus</span>, 4ptos
+                <span>ds</span>, 4ptos
               </td>
               <td class="align-middle font-weight-bold">8</td>
               <td>
@@ -167,9 +167,35 @@
   <script src="js/jquery-3.3.1.slim.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/noticias.js"></script>
   <script>
 
+    // AJAX 
+    var ajax = new XMLHttpRequest(); // Creando una instacia del componente XMLHttpRequest(Peticiones Http)
+    // <-- Configuracion
+    ajax.open("GET", "js/noticias.json"); // ajax.open(TIPO,RECURSO) TIPOS(Verbos GET, POST) Hacer la peticion
+    ajax.onload = function(){
+      if ( ajax.status == 200 ) { // Validar si sale tod obien
+        console.log( ajax.response )
+      }
+    }; // Si es solo de una funcion
+    ajax.send();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     for (var i = 0; i < noticias.length; i++) {
       var noticia = document.querySelector(".noticia").cloneNode(true); // cloneNode() Solo clona al elemento solo, cloneNode(true) clona todo
 
@@ -177,15 +203,27 @@
       noticia.querySelector(".small a").innerText = noticias[i][1];
       noticia.querySelector("p:last-child").innerText = noticias[i][2];
       noticia.querySelector(".img-fluid").src = "img/" + noticias[i][3];
-
+    
       noticia.classList.remove("d-none");
-
+    
       document.querySelector("#ultimas-noticias").appendChild(noticia);
     }
+    
+    var plantilla = document.querySelector(".noticia").cloneNode(true); 
+
+    plantilla.querySelector("h3").innerText = noticia.titulo;
+    plantilla.querySelector(".small a").innerText = noticia.autor;
+    plantilla.querySelector("p:last-child").innerText = noticia.detalle;
+    plantilla.querySelector(".img-fluid").src = "img/" + noticia.imagen;
+
+    plantilla.classList.remove("d-none");
+
+    document.querySelector("#ultimas-noticias").appendChild(plantilla);
+    
 
     for (var i = 0; i < sliderNews.length; i++) {
       var sliderItem = document.querySelector(".carousel-item").cloneNode(true);
-      console.log(sliderItem);
+
       document.querySelector(".carousel-item:first-child").classList.add("active");
       sliderItem.querySelector(".carousel-item h5").innerText = sliderNews[i][0];
       sliderItem.querySelector("img").src="img/" + sliderNews[i][1];
@@ -195,8 +233,7 @@
 
       document.querySelector(".carousel-inner").appendChild(sliderItem);
     }
-
-    
+*/
   </script>
 </body>
 
