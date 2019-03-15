@@ -172,10 +172,24 @@
     // AJAX 
     var ajax = new XMLHttpRequest(); // Creando una instacia del componente XMLHttpRequest(Peticiones Http)
     // <-- Configuracion
-    ajax.open("GET", "js/noticias.json"); // ajax.open(TIPO,RECURSO) TIPOS(Verbos GET, POST) Hacer la peticion
+    ajax.open("GET", "https://api.sheety.co/ad50d976-0c60-4f38-b0da-604731bcd29b"); // ajax.open(TIPO,RECURSO) TIPOS(Verbos GET, POST) Hacer la peticion
     ajax.onload = function(){
       if ( ajax.status == 200 ) { // Validar si sale todo bien
-        console.log( ajax.response )
+
+        let noticias = JSON.parse(ajax.response);
+
+        noticias.forEach(function(noticia){
+          let ficha = document.querySelector(".noticia").cloneNode(true); // cloneNode() Solo clona al elemento solo, cloneNode(true) clona todo
+
+          ficha.querySelector("h3").innerText = noticia.titulo;
+          ficha.querySelector(".small a").innerText = noticia.autor;
+          ficha.querySelector("p:last-child").innerText = noticia.detalle;
+          ficha.querySelector(".img-fluid").src = noticia.imagen;
+          console.log(noticia.imagen)
+          ficha.classList.remove("d-none");
+        
+          document.querySelector("#ultimas-noticias").appendChild(ficha);
+        });
       }
     }; // Si es solo de una funcion
     ajax.send();
